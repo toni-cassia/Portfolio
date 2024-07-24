@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Product Manager & Tech Innovator</title>
+    <style>
+        :root {
+            --deep-brown: #3E2723;
+            --light-brown: #795548;
+            --gold: #FFD700;
+            --light-gold: #FFF8E1;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light-gold);
+        }
+        .container {
+            width: 100%;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+        header {
+            background: linear-gradient(135deg, var(--deep-brown) 0%, var(--light-brown) 100%);
+            color: var(--gold);
+            padding: 40px 0;
+            text-align: center;
+        }
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid var(--gold);
+            overflow: hidden;
+        }
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        h1, h2 {
+            color: var(--deep-brown);
+        }
+        .project {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--gold);
+        }
+        ul {
+            list-style-type: none; /* Removes bullet points */
+            padding: 0; /* Removes default padding */
+        }
+        li {
+            margin: 5px 0; /* Adds some space between items */
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill {
+            background-color: var(--light-brown);
+            color: var(--light-gold);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        .fun-fact {
+            font-style: italic;
+            color: var(--light-brown);
+            margin-top: 20px;
+            border-left: 3px solid var(--gold);
+            padding-left: 10px;
+        }
+        a {
+            color: var(--deep-brown);
+            text-decoration: none;
+        }
+        a:hover {
+            color: var(--light-brown);
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px 0;
+            background-color: var(--deep-brown);
+            color: var(--light-gold);
+        }
+        .contact-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            max-width: 500px;
+            margin: 0 auto; /* Center the form */
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: var(--deep-brown);
+            color: var(--light-gold);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: var(--light-brown);
+        }
+        @media (min-width: 768px) {
+            .container {
+                width: 750px;
+            }
+        }
+        @media (min-width: 992px) {
+            .container {
+                width: 970px;
+            }
+        }
+        @media (min-width: 1200px) {
+            .container {
+                width: 1170px;
+            }
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #FFF8DC;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid var(--light-brown);
+            width: 80%;
+            max-width: 500px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .modal-content h2 {
+            color: var(--brown);
+            margin-bottom: 10px;
+        }
+
+        .modal-content p {
+            margin-bottom: 20px;
+            color: var(--brown);
+        }
+
+        #closeModal {
+            background-color: var(--gold);
+            color: var(--brown);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #closeModal:hover {
+            background-color: #FFC600;
+        }
+
+        footer a {
+            color: var(--light-gold);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-pic">
+                    <img src="pic.jpg" alt="Your Name">
+                </div>
+                <div>
+                    <h1>Mutoni Keziah Rukazambuga</h1>
+                    <p>Product Manager | Digital Explorer | Tech Enthusiast</p>
+                        <p> Transforming Ideas into Tech Gold</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about">
+            <h2>Welcome to My Digital Playground!</h2>
+            <p>Hey there! 👋 I'm not just your average tech enthusiast – I'm a digital explorer on a mission to turn the wildest ideas into game-changing solutions.</p>
+        <p>Currently pursuing a Bachelor's degree in Information Management, I've already dipped my toes in some pretty cool waters. From the United Nations World Food Program to  Keen kleeners, to founding a startup, </p>
+              <p> my journey is all about pushing boundaries and having a blast while doing it. So, buckle up and join me on this exhilarating ride through the tech landscape!</p>
+            <p class="fun-fact">Fun Fact: I can speak three languages fluently, but my favorite language is Python (the coding one, not the snake-charming kind)! 🐍💻</p>
+        </section>
+
+        <section id="projects">
+            <h2>Project Showcase: Where Ideas Come to Life</h2>
+            <div class="project">
+                <h3>3D Language Learning Game App - HNG Internship</h3>
+                <p>Leading the charge in revolutionizing language learning through an immersive 3D gaming experience. As the Product Manager, I've been instrumental in shaping the product vision and strategy.</p>
+                <strong>Role:</strong> Product Manager Intern & Language Game Architect
+                <h4>Key Contributions:</h4>
+                <ul>
+                    <li>📝 Assist in the developmentof  a comprehensive Product Requirements Document (PRD) outlining key features, user stories, and acceptance criteria.</li>
+                    <li>📊 Helped create a detailed Functional Requirements Document (FRD) to guide the development team on technical implementation.</li>
+                
+                    <li>🎨 Collaborated with UX/UI designers to create intuitive, engaging user interfaces.</li>
+                </ul>
+                <strong>Technologies:</strong> Php, Natural Language Processing, Agile Methodologies
+                <div class="project-links">
+                  
+                    <a href="https://docs.google.com/document/d/1aPerPLdsp4je7KcJsjBrjnVrG4m4FQxJJpTqD6kcbeM/edit#heading=h.9vzcf3jlo9bk" target="_blank">PRD</a> | 
+                    <a href="https://docs.google.com/document/d/1ZsQyo_FcmSCZWwZJOHoQ13PegwldaqAzfuF8WKIcKYw/edit?tab=t.0#heading=h.v047jcaej9qz" target="_blank">FRD</a>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Asset Handling System Automation - WFP Rwanda</h3>
+                <p><strong>Role:</strong> Project Lead (aka Chief Automation Wizard)</p>
+                <p><strong>Description:</strong> Led the development and implementation of an automated asset tracking system, turning a paper-heavy process into a sleek digital operation.</p>
+                <p><strong>Technologies:</strong> Microsoft Power Apps, SharePoint</p>
+                <p><strong>Key Contributions:</strong></p>
+                <ul>
+                    <li>🚀 Managed project from conception to launch</li>
+                    <li>🤝 Coordinated with stakeholders</li>
+                    <li>🎯 Ensured alignment with organizational goals</li>
+                </ul>
+            </div>
+            <div class="project">
+                <h3>PCOS Detection Machine Learning Model</h3>
+                <p>Orchestrated the development of an AI-powered health detective, aimed at early detection of PCOS. Because why shouldn't tech make healthcare smarter?</p>
+                <strong>Role:</strong> Project Coordinator & Health Tech Enthusiast
+                <h4>Key Contributions:</h4>
+                <ul>
+                    <li>🔧 Designed and implemented machine learning algorithms for accurate detection.</li>
+                    <li>📊 Analyzed datasets to improve model performance and reliability.</li>
+                    <li>📈 Collaborated with healthcare professionals to validate findings.</li>
+                </ul>
+                <strong>Technologies:</strong> Python, TensorFlow, scikit-learn
+                <div class="project-links">
+                    <a href="https://github.com/Ilysse200/PCOS_detection_System/tree/master" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+    
+            <div class="project">
+                <h3>Blockchain-based Academic Credential Verification System</h3>
+                <p>Spearheading a revolution in academic integrity by leveraging blockchain to make credential fraud a thing of the past. Currently in the incubation phase, this project promises to redefine trust in academic credentials.</p>
+                <strong>Role:</strong> Solution Coordinator & Blockchain Evangelist
+                <h4>Key Contributions:</h4>
+                <ul>
+                    <li>🔍 Researched blockchain technologies and their applications in education.</li>
+                    <li>🛠️ Developed initial prototypes for smart contracts.</li>
+                    <li>🤝 Engaged with educational institutions to gather requirements.</li>
+                </ul>
+                <strong>Technologies:</strong> Blockchain, Smart Contracts, Education Tech
+                <strong>Status:</strong> In Incubation
+            </div>
+    
+            <div class="project">
+                <h3>African Language Teaching App</h3>
+                <p>Championing the preservation and proliferation of African languages through an innovative app. This project is currently in the incubation phase, laying the groundwork for a tech-driven approach to cultural preservation.</p>
+                <strong>Role:</strong> Product Manager & Cultural Tech Advocate
+                <h4>Key Contributions:</h4>
+                <ul>
+                    <li>🗣️ Conducted research on user needs and language learning preferences.</li>
+                    <li>🛠️ Collaborated with linguists to develop effective teaching methodologies.</li>
+                    <li>📈 Created a roadmap for app development and user engagement strategies.</li>
+                </ul>
+                <strong>Technologies:</strong> Mobile App Development, Natural Language Processing, Cultural Insights
+                <strong>Status:</strong> In Incubation
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Expertise: The Tools of My Trade</h2>
+            <div class="skills">
+                <div class="skill">Product Management</div>
+                <div class="skill">Data Analysis</div>
+                <div class="skill">Process Automation</div>
+              
+                <div class="skill">Language Learning</div>
+
+                <div class="skill">Agile Methodologies</div>
+                <div class="skill">Natural Language Processing</div>
+            </div>
+        </section>
+        <section id="growth">
+            <h2>My Growth Journey</h2>
+            <p>Through my whirlwind tour of the tech world in the HNG Internship and various projects, I've leveled up in ways I never expected:</p>
+            <ul>
+                <li>🔄 Mastered the product development lifecycle</li>
+                <li>👥 Became a user-centric design advocate</li>
+                <li>🤝 Honed cross-functional collaboration skills</li>
+                <li>⚖️ Learned to balance technical feasibility and user needs</li>
+                <li>📊 Embraced data-driven decision making</li>
+                <li>🏃‍♂️ Adopted agile methodologies</li>
+                <li>📝 Perfected the art of documentation and specification</li>
+                <li>🎯 Sharpened product management abilities</li>
+            </ul>
+            <p>For more information about the HNG Internship program that has been instrumental in my growth, visit <a href="https://hng.tech" target="_blank">hng.tech</a> and <a href="https://hng.tech/internship" target="_blank">hng.tech/internship</a>.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me: Let's Build Something Amazing Together!</h2>
+            <div class="contact-form">
+                <h3>Get In Touch</h3>
+                <form action="https://formspree.io/f/xyzgkbna" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+        <p>Connect with me on:
+            <a href="https://www.linkedin.com/in/keziahmutonirukazambuga/" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/toni-cassia" target="_blank">GitHub</a> |
+            <a>Email: kmutoni12@gmail.com</a>
+        </p>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h2>Thank You!</h2>
+            <p>Your message has been sent. I'll get back to you soon.</p>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('myModal').style.display = 'block';
+        });
+
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('myModal').style.display = 'none';
+            document.querySelector('.contact-form form').submit();
+        });
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('myModal')) {
+                document.getElementById('myModal').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
